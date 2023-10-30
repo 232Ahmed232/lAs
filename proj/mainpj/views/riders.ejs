@@ -1,0 +1,26 @@
+<%- include('index.ejs') %>
+
+<div class="container">
+    <% rid.forEach(element => { %>
+     
+        
+    
+    <a class="ride" href="/rid/<%= element.name %>">
+        <div class="sqr">        <h3><%= element.name %></h3>
+            <img src="img/riders/<%= element.img %>" alt="" class="riderimg">
+        </div>
+        <div class="infor">
+        <h4>Age: <%= element.year %></h4>
+        <h4>CNIC#: <%= element.cnic %></h4>
+        <h4>whatsapp:+92<%= element.whatsapp %></h4>
+        <h4><span>
+            <% for( let i=0; i < element.star; i++ ) { %>
+                <i class="fa-solid fa-star" style="color: #f5c211;"></i>
+                <% } %>
+        </span></h4>
+        </div>
+    </a>
+    <% }) %>
+</div>
+
+<%- include('footer.ejs') %>

@@ -1,0 +1,92 @@
+<%- include('index.ejs') %>
+
+    <div class="container">
+        <div class="graph">
+            <div id="myPlot"></div>
+            <div class="hriders">
+                <h3>Availabel Riders</h3>
+                <% rid.forEach(element => { %>
+                 
+                <div class="hride">
+                    <img src="img/riders/<%= element.img %>" alt="">
+                    <div class="info">
+                        <span><%= element.name %></span>
+                        <br>
+                        <span>
+                            <% for( let i=0; i < element.star; i++ ) { %>
+                                <i class="fa-solid fa-star" style="color: #f5c211;"></i>
+                                <% } %>
+                        </span>
+                    </div>
+                </div>
+                <% }) %>
+               
+            </div>
+        </div>
+        <script>
+            const xArray = [1, 5, 5, 8, 12, 13, 14, 14, 15, 20, 25];
+            const yArray = [0, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+            // Define Data
+            const data = [{
+                x: xArray,
+                y: yArray,
+                mode: "lines"
+            }];
+
+            // Define Layout
+            const layout = {
+                xaxis: { range: [1, 30], title: "Days" },
+                yaxis: { range: [5, 16], title: "Requests" },
+                title: "Number of Requests - Last Month"
+            };
+
+            // Display using Plotly
+            Plotly.newPlot("myPlot", data, layout);
+        </script>
+
+        <h2>Requests Rate</h2>
+
+        <div class="slide">
+            <div class="slc">
+                <h4>New Requests: 8</h4>
+            </div>
+            <div class="slc">
+                <h4>Requests completed: 80%</h4>
+            </div>
+            <div class="slc">
+                <h4>Requests Canceled: 20%</h4>
+            </div>
+        </div>
+
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+        <script>
+            var xValues = ["Kari", "Vegetables", "Rice", "Fruits", "Bakery"];
+            var yValues = [45, 49, 44, 24, 25];
+            var barColors = ["red", "green", "blue", "orange", "brown"];
+
+            new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: "Food Left in %"
+                    }
+                }
+            });
+        </script>
+
+
+
+    </div>
+
+    <%- include('footer.ejs') %>

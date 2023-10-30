@@ -1,0 +1,73 @@
+
+.graph{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hriders{
+    border-radius: 44px;
+    background-color: white;
+    padding: 10px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hride{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+}
+.hride img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#myPlot{
+    width: 70%;
+    height: 50vh;
+}
+
+.slide{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 35px;
+    border: 2px solid grey;
+}
+
+.slc{
+    background-color: rgb(255, 255, 255);
+    width: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+h2{
+    display: block;
+    text-align: center;
+}
+
+.details{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+    /* height: 500px; */
+}
+
+#myChart{
+    width: 100%;
+    height: 50vh;
+    margin: 20px;
+}

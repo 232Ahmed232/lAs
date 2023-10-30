@@ -1,0 +1,20 @@
+<%- include('index.ejs') %>
+
+<div class="container">
+    <% rid.forEach(element => { %>
+     
+    
+   
+    
+    
+        <h1>Name : <%= element.name %></h1>
+        <h4>location: <%= element.Address %></h4>
+        <h4>img: <%= element.img %></h4>
+        <h4>cnic: <%= element.cnic %></h4>
+        <h4>whatsapp: <%= element.whatsapp %></h4>
+        <h4>email: <%= element.email %></h4>
+   
+    <% }) %>
+</div>
+
+<%- include('footer.ejs') %>

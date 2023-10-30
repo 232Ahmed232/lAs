@@ -1,0 +1,34 @@
+.sqr{
+    height: 150px;
+    width: 100%;
+    color: rgb(160, 181, 199);
+    background-color: yellow;
+    border-radius: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.riderimg{
+    height: 100px;
+width: 100px;
+border-radius: 50%;
+margin-top: 75px;
+border-top: 8px solid white;
+border-left: 8px solid white;
+border-right: 8px solid white;
+}
+.ride{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 25%;
+    background-color: white;
+    border: 3px solid grey;
+    border-radius: 35px;
+    text-align: center;
+    height: 350px;
+}

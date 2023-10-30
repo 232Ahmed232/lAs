@@ -1,0 +1,22 @@
+<%- include('index.ejs') %>
+
+<div class="container">
+<% req.forEach(element => { %>
+ 
+    
+    <div class="cart">
+        <div class="reqh">
+            <h3>Name of Consumer</h3>
+        <h3>
+             <%= element.name %></h3>
+        </div>
+        
+        <h4>location: <%= element.address%></h4>
+        <h4>Email: <%= element.email%></h4>
+        <h4>Total packets: <%= element.amount%></h4>
+    </div>
+    <% }) %>    
+
+</div>
+
+<%- include('footer.ejs') %>
